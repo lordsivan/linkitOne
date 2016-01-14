@@ -1,0 +1,61 @@
+<ion-view view-title="Configure IOT">
+    <ion-content class="padding">
+        <ion-refresher
+                pulling-text="Pull to refresh..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+    <div class="card" >
+           <div class="item item-divider">
+               WI-FI Settings
+           </div>
+           <div class="item item-text-wrap">
+               <div class="list">
+                   <label class="item item-input ">
+                       <input type="text" placeholder="Access Point" ng-model="wifiModel.accessPoint">
+                   </label>
+                   <label class="item item-input ">
+                       <input type="text" placeholder="Password" ng-model="wifiModel.password">
+                   </label>
+                   <li class="item item-toggle">
+                       Connection Status
+                       <label class="toggle toggle-assertive">
+                           <input type="checkbox" ng-model="wifiModel.connectionStatus">
+                           <div class="track">
+                               <div class="handle"></div>
+                           </div>
+                       </label>
+                   </li>
+               </div>
+           </div>
+            <div class="item item-divider">
+                <button class="button button-full button-positive" ng-click="changeWifi()">
+                    Apply
+                </button>
+            </div>
+    </div>
+    <div class="card" ng-show="wifiModel.connectionStatus">
+            <div class="item item-divider">
+                Connection Details
+            </div>
+           <div class="item item-text-wrap">
+
+                   <label class="item item-input">
+                       <span class="input-label">IP Address</span>
+                       <input type="text" ng-model="wifiModel.ipAddress">
+                   </label>
+                   <label class="item item-input">
+                       <span class="input-label">Subnet Mask</span>
+                       <input type="text" ng-model="wifiModel.subnetMask">
+                   </label>
+                   <label class="item item-input">
+                       <span class="input-label">Gateway IP</span>
+                       <input type="text" ng-model="wifiModel.gatewayIP">
+                   </label>
+                   <label class="item item-input">
+                       <span class="input-label">Signal Strength</span>
+                       <input type="text" ng-model="wifiModel.signalStrength">
+                   </label>
+           </div>
+    </div>
+    </ion-content>
+</ion-view>

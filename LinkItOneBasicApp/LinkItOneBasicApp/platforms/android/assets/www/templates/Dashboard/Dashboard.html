@@ -1,0 +1,61 @@
+
+<ion-view title="DashBoard">
+    <ion-content padding="true">
+        <div class="card">
+            <div class="item item-divider">
+                Water level Indicator
+            </div>
+            <div class="item item-text-wrap">
+                <i class="icon ion-volume-low" style="height:30px"></i>
+                <input type="range" name="volume" min="0" max="100" value="{{water.level}}" step="25" ng-model="water.range" style="width:95%;height:30px">
+                <i class="icon ion-volume-high" style="height:30px"></i>
+            </div>
+            <div class="item item-divider">
+                <div class="button-bar">
+                    <a class="button">Empty Water </a>
+                    <a class="button">Fill Water</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="item item-divider">
+                Light Monitor
+            </div>
+            <div class="item item-text-wrap">
+                <i class="icon ion-volume-low" style="height:30px"></i>
+                <input type="range" name="lux" min="0" max="1000" value="{{lux.level}}" step="100" ng-model="lux.range" style="width:95%;height:30px">
+                <i class="icon ion-volume-high" style="height:30px"></i>
+            </div>
+            <div class="item item-divider">
+                <li class="item item-toggle">
+                    LED Status
+                    <label class="toggle toggle-assertive">
+                        <input type="checkbox" ng-model="lux.connectionStatus" ng-change="luxChange()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="item item-divider">
+                Food Feeder
+            </div>
+            <div class="item item-divider">
+                <li class="item item-toggle">
+                    Feed Now
+                    <label class="toggle toggle-assertive">
+                        <input type="checkbox" ng-model="foodFeed.status" ng-change="foodFeedChange()">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </li>
+            </div>
+        </div>
+
+
+    </ion-content>
+</ion-view>

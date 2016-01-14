@@ -1,0 +1,16 @@
+﻿<ion-view view-title="Settings">
+    <ion-content class="padding">
+        <ion-list ng-hide="isConnected">
+            <div class="list">
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        IOT BLE
+                    </div>
+                    <select ng-options="bluetooth as bluetooth.address +bluetooth.name   for bluetooth in settingsModel.blueToothList " ng-model="settingsModel.selectedBLE" ng-change="Bleconnect()"></select>
+                </label>
+            </div>
+
+        </ion-list>
+
+    </ion-content>
+</ion-view>
