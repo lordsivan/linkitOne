@@ -42,14 +42,19 @@ void setup()
     //Plotly_setup();
 
     //6.PHMointer
-    PHMointor_setup();
+    //PHMointor_setup();
+    
+    //7. Ultrasonic
+    ultrasonic_setup();
+    
 }
 void loop(){
   BTModuleLoop();
   //Plotly_loop();
   //ph_loop();
-  lux_loop();
+  //lux_loop();
   //temp_loop();
   //food_loop();
+  ultrasonic_loop();
 }
 

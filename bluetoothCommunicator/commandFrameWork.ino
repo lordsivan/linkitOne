@@ -27,7 +27,10 @@ String processCommand(String commandJson){
     }
     else if(cmm.startsWith("commandFoodFeed")){
       return commandFoodFeed(root,commandJson);
-    }    
+    }
+    else if(cmm.startsWith("commandChangeTempCoefficient")){
+      return commandChangeTempCoefficient(root,commandJson);
+    }
   }
 }
 

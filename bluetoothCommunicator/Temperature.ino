@@ -1,4 +1,4 @@
-#include <OneWire.h>
+/*#include <OneWire.h>
 
 // OneWire DS18S20, DS18B20, DS1822 Temperature Example
 //
@@ -114,4 +114,4 @@ void temp_loop() {
     Serial.println("Switch off heater");
     digitalWrite(HEATER,LOW);   
   }
-}
+}*/

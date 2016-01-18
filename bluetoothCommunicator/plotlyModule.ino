@@ -1,4 +1,4 @@
-#include "plotly_streaming_wifi.h"
+/*#include "plotly_streaming_wifi.h"
 
 // Sign up to plotly here: https://plot.ly
 // View your API key and streamtokens here: https://plot.ly/settings
@@ -35,4 +35,4 @@ void Plotly_loop() {
   graph.plot(x, y, tokens[1]);
   //Serial.println(x);
   //Serial.println(y);
-}
+}*/

@@ -1,6 +1,25 @@
 
 <ion-view title="DashBoard">
     <ion-content padding="true">
+
+        <div class="card">
+            <div class="item item-divider">
+                Ultrasonic Water Level
+            </div>
+            <div class="item item-text-wrap">
+                <i class="icon ion-volume-low" style="height:30px"></i>
+                <span>{{ultrasonic.distance}} cm</span>
+                <input type="range" name="volume" min="0" max="10" value="{{ultrasonic.distance}}" step="1" ng-model="ultrasonic.distance" style="width:95%;height:30px">
+                <i class="icon ion-volume-high" style="height:30px"></i>
+            </div>
+            <div class="item item-divider">
+                <i class="icon ion-volume-low" style="height:30px"></i>
+                <span>{{ultrasonic.tempCoefficient}} cm</span>
+                <input type="range" name="volume" min="29.1" max="40" value="{{ultrasonic.tempCoefficient}}" step="1" ng-model="ultrasonic.tempCoefficient" ng-change="setTempCoefficient()" style="width:95%;height:30px">
+                <i class="icon ion-volume-high" style="height:30px"></i>
+            </div>
+        </div>
+
         <div class="card">
             <div class="item item-divider">
                 Water level Indicator
@@ -17,6 +36,7 @@
                 </div>
             </div>
         </div>
+
         <div class="card">
             <div class="item item-divider">
                 Light Monitor
